@@ -46,6 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print("url:\(url)")
         
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ShowResult"), object: nil, userInfo: ["Result": url.query ?? ""])
+        
         return true
     }
 

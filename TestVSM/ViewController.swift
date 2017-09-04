@@ -46,10 +46,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var macTextField: UITextField!
     
+    @IBOutlet weak var resultTextView: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.showResult(noti:)), name:NSNotification.Name(rawValue: "ShowResult"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +79,15 @@ class ViewController: UIViewController {
         print("vsmUrl: \(vsmUrl)")
         
         if UIApplication.shared.canOpenURL(vsmUrl) {
+            resultTextView.text = nil
             UIApplication.shared.open(vsmUrl, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @objc private func showResult(noti: Notification) {
+        
+        if let result = noti.userInfo?["Result"]{
+            resultTextView.text = result as! String
         }
     }
 }

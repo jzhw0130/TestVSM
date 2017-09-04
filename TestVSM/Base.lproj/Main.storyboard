@@ -50,22 +50,33 @@
                                     <action selector="measurePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5iw-4g-b4S"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wrN-Rx-WJx">
+                                <rect key="frame" x="19.5" y="254" width="337.5" height="363"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wrN-Rx-WJx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cdt-39-LM8"/>
                             <constraint firstItem="kV5-UG-srt" firstAttribute="width" secondItem="FGQ-5v-7ac" secondAttribute="width" id="FnU-e9-CMb"/>
                             <constraint firstItem="cmx-ho-T0j" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="HZs-2f-t0R"/>
+                            <constraint firstItem="wrN-Rx-WJx" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-50" id="HjP-2u-QiN"/>
                             <constraint firstItem="cmx-ho-T0j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ixx-KH-K6D"/>
                             <constraint firstItem="FGQ-5v-7ac" firstAttribute="width" secondItem="cmx-ho-T0j" secondAttribute="width" id="Vdh-bR-hVq"/>
                             <constraint firstItem="FGQ-5v-7ac" firstAttribute="centerX" secondItem="cmx-ho-T0j" secondAttribute="centerX" id="eAG-d3-cjl"/>
                             <constraint firstItem="cmx-ho-T0j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="evU-nb-iJu"/>
                             <constraint firstItem="kV5-UG-srt" firstAttribute="centerX" secondItem="FGQ-5v-7ac" secondAttribute="centerX" id="iAv-wy-ec6"/>
+                            <constraint firstItem="wrN-Rx-WJx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="ocD-DG-viE"/>
                             <constraint firstItem="FGQ-5v-7ac" firstAttribute="top" secondItem="cmx-ho-T0j" secondAttribute="bottom" constant="30" id="rcG-xg-mu3"/>
+                            <constraint firstItem="wrN-Rx-WJx" firstAttribute="top" secondItem="kV5-UG-srt" secondAttribute="bottom" constant="20" id="si9-CI-IyY"/>
                             <constraint firstItem="kV5-UG-srt" firstAttribute="top" secondItem="FGQ-5v-7ac" secondAttribute="bottom" constant="30" id="tbg-Zn-wtY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="macTextField" destination="FGQ-5v-7ac" id="c7y-uN-cHE"/>
+                        <outlet property="resultTextView" destination="wrN-Rx-WJx" id="cpW-YU-wQd"/>
                         <outlet property="segmentControl" destination="cmx-ho-T0j" id="7Rl-CO-4q6"/>
                     </connections>
                 </viewController>
