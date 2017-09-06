@@ -39,7 +39,7 @@ enum DevieType: Int {
     
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LBXScanViewControllerDelegate {
 
     
     
@@ -47,7 +47,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var macTextField: UITextField!
     
     @IBOutlet weak var resultTextView: UITextView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +60,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @objc private func showResult(noti: Notification) {
+        
+        if let result = noti.userInfo?["Result"]{
+            resultTextView.text = result as! String
+        }
+    }
     
     
     @IBAction func segmentControlPressed(_ sender: Any) {
@@ -68,6 +73,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func measurePressed(_ sender: Any) {
+        
+        resultTextView.text = ""
         
         let deviceType = DevieType(rawValue: segmentControl.selectedSegmentIndex)!
         
@@ -79,16 +86,39 @@ class ViewController: UIViewController {
         print("vsmUrl: \(vsmUrl)")
         
         if UIApplication.shared.canOpenURL(vsmUrl) {
-            resultTextView.text = nil
             UIApplication.shared.open(vsmUrl, options: [:], completionHandler: nil)
         }
     }
     
-    @objc private func showResult(noti: Notification) {
-        
-        if let result = noti.userInfo?["Result"]{
-            resultTextView.text = result as! String
+    //MARK: - Scan QR Code
+    
+    @IBAction func scanQRCodePressed(_ sender: Any) {
+        ScanQRCodeTool.commandPushScanViewController(delegate: self)
+    }
+    
+    
+    //MARK: - Scan result
+    
+    func scanFinished(scanResult: LBXScanResult, error: String?) {
+        NSLog("scanResult:\(String(describing: scanResult.strScanned))")
+        if let code = scanResult.strScanned {
+            commandCheckCode(code: code)
         }
+    }
+    
+    private func commandCheckCode(code: String!) {
+        let components = code.components(separatedBy: ":")
+        
+        if let mac = components.last, mac.characters.count == 12, isValidMac(mac) {
+             self.macTextField.text = mac
+        }
+    }
+    
+    private func isValidMac(_ string: String) -> Bool {
+        let regex = "[a-zA-Z0-9]*"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        let inputString = predicate.evaluate(with: string)
+        return inputString
     }
 }
 

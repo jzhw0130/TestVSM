@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1700F6471F5F9E7A00E6B4F4 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1700F63F1F5F9E7A00E6B4F4 /* CodeScan.bundle */; };
+		1700F6481F5F9E7A00E6B4F4 /* LBXPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F6401F5F9E7A00E6B4F4 /* LBXPermissions.swift */; };
+		1700F6491F5F9E7A00E6B4F4 /* LBXScanLineAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F6411F5F9E7A00E6B4F4 /* LBXScanLineAnimation.swift */; };
+		1700F64A1F5F9E7A00E6B4F4 /* LBXScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F6421F5F9E7A00E6B4F4 /* LBXScanNetAnimation.swift */; };
+		1700F64B1F5F9E7A00E6B4F4 /* LBXScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F6431F5F9E7A00E6B4F4 /* LBXScanView.swift */; };
+		1700F64C1F5F9E7A00E6B4F4 /* LBXScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F6441F5F9E7A00E6B4F4 /* LBXScanViewController.swift */; };
+		1700F64D1F5F9E7A00E6B4F4 /* LBXScanViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F6451F5F9E7A00E6B4F4 /* LBXScanViewStyle.swift */; };
+		1700F64E1F5F9E7A00E6B4F4 /* LBXScanWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F6461F5F9E7A00E6B4F4 /* LBXScanWrapper.swift */; };
+		1700F6501F5FA10300E6B4F4 /* ScanQRCodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700F64F1F5FA10300E6B4F4 /* ScanQRCodeTool.swift */; };
 		1726D2EE1F581CFD00146F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1726D2ED1F581CFD00146F42 /* AppDelegate.swift */; };
 		1726D2F01F581CFD00146F42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1726D2EF1F581CFD00146F42 /* ViewController.swift */; };
 		1726D2F31F581CFD00146F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1726D2F11F581CFD00146F42 /* Main.storyboard */; };
@@ -15,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1700F63F1F5F9E7A00E6B4F4 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		1700F6401F5F9E7A00E6B4F4 /* LBXPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXPermissions.swift; sourceTree = "<group>"; };
+		1700F6411F5F9E7A00E6B4F4 /* LBXScanLineAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanLineAnimation.swift; sourceTree = "<group>"; };
+		1700F6421F5F9E7A00E6B4F4 /* LBXScanNetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanNetAnimation.swift; sourceTree = "<group>"; };
+		1700F6431F5F9E7A00E6B4F4 /* LBXScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanView.swift; sourceTree = "<group>"; };
+		1700F6441F5F9E7A00E6B4F4 /* LBXScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewController.swift; sourceTree = "<group>"; };
+		1700F6451F5F9E7A00E6B4F4 /* LBXScanViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewStyle.swift; sourceTree = "<group>"; };
+		1700F6461F5F9E7A00E6B4F4 /* LBXScanWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanWrapper.swift; sourceTree = "<group>"; };
+		1700F64F1F5FA10300E6B4F4 /* ScanQRCodeTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanQRCodeTool.swift; sourceTree = "<group>"; };
 		1726D2EA1F581CFD00146F42 /* TestVSM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestVSM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1726D2ED1F581CFD00146F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1726D2EF1F581CFD00146F42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1700F63E1F5F9E7A00E6B4F4 /* SwiftScan */ = {
+			isa = PBXGroup;
+			children = (
+				1700F64F1F5FA10300E6B4F4 /* ScanQRCodeTool.swift */,
+				1700F63F1F5F9E7A00E6B4F4 /* CodeScan.bundle */,
+				1700F6401F5F9E7A00E6B4F4 /* LBXPermissions.swift */,
+				1700F6411F5F9E7A00E6B4F4 /* LBXScanLineAnimation.swift */,
+				1700F6421F5F9E7A00E6B4F4 /* LBXScanNetAnimation.swift */,
+				1700F6431F5F9E7A00E6B4F4 /* LBXScanView.swift */,
+				1700F6441F5F9E7A00E6B4F4 /* LBXScanViewController.swift */,
+				1700F6451F5F9E7A00E6B4F4 /* LBXScanViewStyle.swift */,
+				1700F6461F5F9E7A00E6B4F4 /* LBXScanWrapper.swift */,
+			);
+			path = SwiftScan;
+			sourceTree = "<group>";
+		};
 		1726D2E11F581CFD00146F42 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +88,7 @@
 		1726D2EC1F581CFD00146F42 /* TestVSM */ = {
 			isa = PBXGroup;
 			children = (
+				1700F63E1F5F9E7A00E6B4F4 /* SwiftScan */,
 				1726D2ED1F581CFD00146F42 /* AppDelegate.swift */,
 				1726D2EF1F581CFD00146F42 /* ViewController.swift */,
 				1726D2F11F581CFD00146F42 /* Main.storyboard */,
@@ -127,6 +162,7 @@
 				1726D2F81F581CFD00146F42 /* LaunchScreen.storyboard in Resources */,
 				1726D2F51F581CFD00146F42 /* Assets.xcassets in Resources */,
 				1726D2F31F581CFD00146F42 /* Main.storyboard in Resources */,
+				1700F6471F5F9E7A00E6B4F4 /* CodeScan.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +173,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1700F64D1F5F9E7A00E6B4F4 /* LBXScanViewStyle.swift in Sources */,
+				1700F6491F5F9E7A00E6B4F4 /* LBXScanLineAnimation.swift in Sources */,
+				1700F64A1F5F9E7A00E6B4F4 /* LBXScanNetAnimation.swift in Sources */,
 				1726D2F01F581CFD00146F42 /* ViewController.swift in Sources */,
+				1700F64E1F5F9E7A00E6B4F4 /* LBXScanWrapper.swift in Sources */,
+				1700F6481F5F9E7A00E6B4F4 /* LBXPermissions.swift in Sources */,
+				1700F6501F5FA10300E6B4F4 /* ScanQRCodeTool.swift in Sources */,
+				1700F64B1F5F9E7A00E6B4F4 /* LBXScanView.swift in Sources */,
 				1726D2EE1F581CFD00146F42 /* AppDelegate.swift in Sources */,
+				1700F64C1F5F9E7A00E6B4F4 /* LBXScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +348,7 @@
 				1726D2FE1F581CFD00146F42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
