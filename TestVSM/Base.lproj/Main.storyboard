@@ -47,6 +47,7 @@
                                     <segment title="PO3"/>
                                     <segment title="BG5"/>
                                     <segment title="HS4S"/>
+                                    <segment title="AM4"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentControlPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="q6Y-Td-9H5"/>

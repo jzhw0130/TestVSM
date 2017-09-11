@@ -16,6 +16,7 @@ enum DevieType: Int {
     case po3
     case bg5
     case hs4s
+    case am4
     
     
     func getDataType() -> String {
@@ -30,7 +31,7 @@ enum DevieType: Int {
             dataType = "hs"
         case .po3:
             dataType = "po"
-        case .am3s:
+        case .am3s, .am4:
             dataType = "am"
         }
         
@@ -78,8 +79,24 @@ class ViewController: UIViewController, LBXScanViewControllerDelegate {
         
         let deviceType = DevieType(rawValue: segmentControl.selectedSegmentIndex)!
         
-        let urlString = "ihealth-layer-vsm://?measure=\(deviceType.getDataType())&deviceModel=\(deviceType.rawValue)&mac=\(macTextField.text!)&unit=1"
+        var urlString = "ihealth-layer-vsm://?measure=\(deviceType.getDataType())&deviceModel=\(deviceType.rawValue)&mac=\(macTextField.text!)&unit=1"
         
+        if deviceType == .am4 {
+            urlString = urlString.appending("&userID=\(1001)")
+            urlString = urlString.appending("&age=\(30)")
+            urlString = urlString.appending("&height=\(180)")
+            urlString = urlString.appending("&weight=\(70)")
+            urlString = urlString.appending("&stepGoal=\(5000)")
+            urlString = urlString.appending("&bmr=\(200)")
+            urlString = urlString.appending("&sex=\(1)")
+            urlString = urlString.appending("&lengthUnit=\(1)")
+            
+            urlString = urlString.appending("&swimGoal=\(60)")
+            urlString = urlString.appending("&swimPoolLength=\(50)")
+            urlString = urlString.appending("&swimUnit=\(1)")
+            urlString = urlString.appending("&swimStayTime=\(10)")
+
+        }
         
         let vsmUrl = URL(string: urlString)!
         
