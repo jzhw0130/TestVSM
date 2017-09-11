@@ -63,8 +63,26 @@ class ViewController: UIViewController, LBXScanViewControllerDelegate {
 
     @objc private func showResult(noti: Notification) {
         
-        if let result = noti.userInfo?["Result"]{
-            resultTextView.text = result as! String
+        if let result = noti.userInfo?["Result"] as? String{
+            
+            var displayString = ""
+            
+            let valueArray = result.components(separatedBy: "&")
+            for value in valueArray {
+                let subValueArray = value.components(separatedBy: "=")
+                if subValueArray.count == 2, let key = subValueArray.first, let value = subValueArray.last {
+                    if key == "data" {
+                        let data =  Data.init(base64Encoded: value.removingPercentEncoding!)
+                        let jsonString = String.init(data: data!, encoding: .utf8)!
+                        displayString = displayString.appending("\(key)=\(jsonString)\n")
+                    } else {
+                        displayString = displayString.appending("\(key)=\(value)\n")
+                    }
+                }
+            }
+            
+            resultTextView.text = displayString
+            
         }
     }
     
