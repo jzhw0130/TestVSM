@@ -79,11 +79,17 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cmy-j9-ZQW">
-                                <rect key="frame" x="38" y="344" width="300" height="313"/>
+                                <rect key="frame" x="38" y="344" width="300" height="263"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.67531722319999998" blue="0.43086862999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9R-C7-IBe" userLabel="Version">
+                                <rect key="frame" x="38" y="612" width="300" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -92,15 +98,19 @@
                             <constraint firstItem="cmy-j9-ZQW" firstAttribute="width" secondItem="kV5-UG-srt" secondAttribute="width" id="NsE-uF-fUx"/>
                             <constraint firstItem="4Pa-IV-woW" firstAttribute="leading" secondItem="FGQ-5v-7ac" secondAttribute="trailing" constant="5" id="PX2-Ij-MIr"/>
                             <constraint firstItem="FGQ-5v-7ac" firstAttribute="leading" secondItem="cmx-ho-T0j" secondAttribute="leading" id="SJd-Wk-Q6J"/>
+                            <constraint firstItem="K9R-C7-IBe" firstAttribute="centerX" secondItem="cmy-j9-ZQW" secondAttribute="centerX" id="SMF-57-Mkr"/>
                             <constraint firstItem="4Pa-IV-woW" firstAttribute="height" secondItem="FGQ-5v-7ac" secondAttribute="height" id="UxT-NA-vwx"/>
                             <constraint firstItem="FGQ-5v-7ac" firstAttribute="width" secondItem="cmx-ho-T0j" secondAttribute="width" multiplier="0.5" id="Vdh-bR-hVq"/>
-                            <constraint firstItem="cmy-j9-ZQW" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-10" id="dnH-Nw-Nau"/>
+                            <constraint firstItem="K9R-C7-IBe" firstAttribute="width" secondItem="cmy-j9-ZQW" secondAttribute="width" id="WrD-GX-KhB"/>
+                            <constraint firstItem="cmy-j9-ZQW" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-60" id="dnH-Nw-Nau"/>
                             <constraint firstItem="kV5-UG-srt" firstAttribute="width" secondItem="cmx-ho-T0j" secondAttribute="width" id="eR0-Bk-2fn"/>
                             <constraint firstItem="cmx-ho-T0j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="evU-nb-iJu"/>
+                            <constraint firstItem="K9R-C7-IBe" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-8" id="hnJ-5q-bvW"/>
                             <constraint firstItem="kV5-UG-srt" firstAttribute="centerX" secondItem="cmx-ho-T0j" secondAttribute="centerX" id="nZq-hN-xoz"/>
                             <constraint firstItem="cmy-j9-ZQW" firstAttribute="centerX" secondItem="kV5-UG-srt" secondAttribute="centerX" id="nun-PD-7RI"/>
                             <constraint firstItem="cmy-j9-ZQW" firstAttribute="top" secondItem="kV5-UG-srt" secondAttribute="bottom" constant="50" id="q6x-kQ-vaV"/>
                             <constraint firstItem="FGQ-5v-7ac" firstAttribute="top" secondItem="cmx-ho-T0j" secondAttribute="bottom" constant="30" id="rcG-xg-mu3"/>
+                            <constraint firstItem="K9R-C7-IBe" firstAttribute="top" secondItem="cmy-j9-ZQW" secondAttribute="bottom" constant="5" id="sGm-fg-bkp"/>
                             <constraint firstItem="kV5-UG-srt" firstAttribute="top" secondItem="FGQ-5v-7ac" secondAttribute="bottom" constant="30" id="tbg-Zn-wtY"/>
                             <constraint firstItem="kV5-UG-srt" firstAttribute="height" secondItem="4Pa-IV-woW" secondAttribute="height" id="tp6-b3-bX9"/>
                             <constraint firstItem="4Pa-IV-woW" firstAttribute="width" secondItem="FGQ-5v-7ac" secondAttribute="width" constant="-5" id="ukf-f3-aqO"/>
@@ -112,6 +122,7 @@
                         <outlet property="macTextField" destination="FGQ-5v-7ac" id="c7y-uN-cHE"/>
                         <outlet property="resultTextView" destination="cmy-j9-ZQW" id="LgJ-sI-rok"/>
                         <outlet property="segmentControl" destination="cmx-ho-T0j" id="7Rl-CO-4q6"/>
+                        <outlet property="versionLabel" destination="K9R-C7-IBe" id="MBi-Xf-C94"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
