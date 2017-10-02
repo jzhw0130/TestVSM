@@ -178,19 +178,19 @@ class ViewController: UIViewController, LBXScanViewControllerDelegate {
         var urlString = "ihealth-layer-vsm://?measure=\(deviceType.getDataType())&deviceModel=\(deviceType.rawValue)&mac=\(macTextField.text!)&unit=1"
         
         if deviceType == .am4 {
-            urlString = urlString.appending("&userID=\(1001)")
+//            urlString = urlString.appending("&userID=\(1001)")
             urlString = urlString.appending("&age=\(30)")
             urlString = urlString.appending("&height=\(180)")
             urlString = urlString.appending("&weight=\(70)")
-            urlString = urlString.appending("&stepGoal=\(5000)")
-            urlString = urlString.appending("&bmr=\(0)")
+//            urlString = urlString.appending("&stepGoal=\(5000)")
+//            urlString = urlString.appending("&bmr=\(0)")
             urlString = urlString.appending("&sex=\(1)")
-            urlString = urlString.appending("&lengthUnit=\(1)")
+//            urlString = urlString.appending("&lengthUnit=\(1)")
             
-            urlString = urlString.appending("&swimGoal=\(60)")
-            urlString = urlString.appending("&swimPoolLength=\(50)")
-            urlString = urlString.appending("&swimUnit=\(1)")
-            urlString = urlString.appending("&swimStayTime=\(10)")
+//            urlString = urlString.appending("&swimGoal=\(60)")
+//            urlString = urlString.appending("&swimPoolLength=\(50)")
+//            urlString = urlString.appending("&swimUnit=\(1)")
+//            urlString = urlString.appending("&swimStayTime=\(10)")
 
         }
         
