@@ -50,6 +50,8 @@ class ViewController: UIViewController, LBXScanViewControllerDelegate {
     @IBOutlet weak var resultTextView: UITextView!
     @IBOutlet weak var versionLabel: UILabel!
     
+    var chacheMac = [Int: String]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,7 +168,12 @@ class ViewController: UIViewController, LBXScanViewControllerDelegate {
     
     
     @IBAction func segmentControlPressed(_ sender: Any) {
-        
+        let deviceType = DevieType(rawValue: segmentControl.selectedSegmentIndex)!
+        if let mac = chacheMac[deviceType.rawValue] {
+            self.macTextField.text = mac
+        } else {
+            self.macTextField.text = ""
+        }
     }
 
     @IBAction func measurePressed(_ sender: Any) {
@@ -224,6 +231,11 @@ class ViewController: UIViewController, LBXScanViewControllerDelegate {
         for compent in components {
             if let mac = compent.components(separatedBy: ":").last,mac.characters.count == 12, isValidMac(mac) {
                 self.macTextField.text = mac
+                
+                //Cache mac for type
+                
+                let deviceType = DevieType(rawValue: segmentControl.selectedSegmentIndex)!
+                chacheMac[deviceType.rawValue] = mac
             }
         }
     }
