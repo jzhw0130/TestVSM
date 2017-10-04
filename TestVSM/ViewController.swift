@@ -220,10 +220,11 @@ class ViewController: UIViewController, LBXScanViewControllerDelegate {
     }
     
     private func commandCheckCode(code: String!) {
-        let components = code.components(separatedBy: ":")
-        
-        if let mac = components.last, mac.characters.count == 12, isValidMac(mac) {
-             self.macTextField.text = mac
+        let components = code.components(separatedBy: " ")
+        for compent in components {
+            if let mac = compent.components(separatedBy: ":").last,mac.characters.count == 12, isValidMac(mac) {
+                self.macTextField.text = mac
+            }
         }
     }
     
